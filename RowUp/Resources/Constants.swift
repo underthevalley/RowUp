@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Colors {
+struct ColorPalette {
     static let pink: UIColor = UIColor(red:1.00, green:0.85, blue:0.85, alpha:1.0)
     static let coral: UIColor = UIColor(red:0.97, green:0.46, blue:0.48, alpha:1.0)
 }

@@ -9,25 +9,41 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--background-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="RowUp_WatchKit_App" customModuleProvider="target">
+                <controller backgroundImage="background" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="RowUp_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label width="136" height="25" alignment="left" text="Row Up" textAlignment="center" id="RX6-2w-UO5">
-                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
-                        </label>
-                        <label width="136" height="92" alignment="left" text="0" textAlignment="center" id="1wu-qF-Fw9">
+                        <label width="136" height="20" alignment="center" textAlignment="center" id="cos-JQ-Pjc"/>
+                        <button width="136" height="34" alignment="center" title="Up" id="I6e-p6-Xzp">
+                            <connections>
+                                <action selector="upButtonTapped" destination="AgC-eL-Hgc" id="nOi-1V-Kfb"/>
+                            </connections>
+                        </button>
+                        <label width="136" height="34" alignment="center" text="0" textAlignment="center" id="1wu-qF-Fw9">
                             <gestureRecognizers>
                                 <tapGestureRecognizer id="yI0-aH-Wet"/>
+                                <longPressGestureRecognizer id="P74-xn-bJ3">
+                                    <connections>
+                                        <action selector="longPress:" destination="AgC-eL-Hgc" id="8RG-A6-ym9"/>
+                                    </connections>
+                                </longPressGestureRecognizer>
                             </gestureRecognizers>
                             <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                         </label>
+                        <button width="1" height="30" alignment="center" title="Down" id="lCA-n0-t1L">
+                            <connections>
+                                <action selector="downButtonTapped" destination="AgC-eL-Hgc" id="VY8-4g-bTu"/>
+                            </connections>
+                        </button>
                     </items>
                     <color key="backgroundColor" red="0.93725490199999995" green="0.57647058819999997" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="countLabel" destination="1wu-qF-Fw9" id="KFM-To-DbL"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="308"/>
+            <point key="canvasLocation" x="220" y="274"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

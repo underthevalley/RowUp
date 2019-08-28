@@ -13,8 +13,6 @@ struct Counter {
     //MARK: Properties
     var name: String
     var count: Int = 0
-    var color: UIColor = Colors.pink
-    var digits : Int = 2
     
     //MARK: Init
     
